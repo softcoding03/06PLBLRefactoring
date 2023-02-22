@@ -132,16 +132,15 @@ public class ProductController {
 	
 	@RequestMapping("/updateProduct.do")
 	public String updateProduct(@ModelAttribute("product") Product product,
-								@RequestParam("prodNo") int prodNo,
-								@RequestParam("regdate") Date regdate,
 								Model model , HttpSession session) throws Exception{
-
-		product.setProdNo(prodNo);
-		product.setRegDate(regdate);
+		
+		System.out.println("product ??? -> "+ product);
 		System.out.println("/updateProduct.do");
 		//Business Logic
 		productService.updateProduct(product);
 		
+		Product product2 = productService.getProduct(product.getProdNo());
+		model.addAttribute("product", product2);
 		return "forward:/product/updateProduct.jsp";
 	}
 }

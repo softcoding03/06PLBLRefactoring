@@ -44,7 +44,7 @@ Product vo = (Product)request.getAttribute("upcom");
 			상품번호 <img src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.prodNo}</td>
+		<td class="ct_write01">${product.prodNo}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -54,7 +54,7 @@ Product vo = (Product)request.getAttribute("upcom");
 			상품명 <img src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.prodName}</td>
+		<td class="ct_write01">${product.prodName}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -64,7 +64,7 @@ Product vo = (Product)request.getAttribute("upcom");
 			상품이미지 <img 	src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.fileName}
+		<td class="ct_write01">${product.fileName}
 			
 		</td>
 	</tr>
@@ -76,7 +76,7 @@ Product vo = (Product)request.getAttribute("upcom");
 			상품상세정보 <img src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.prodDetail}</td>
+		<td class="ct_write01">${product.prodDetail}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -84,7 +84,7 @@ Product vo = (Product)request.getAttribute("upcom");
 	<tr>
 		<td width="104" class="ct_write">제조일자</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.manuDate}</td>
+		<td class="ct_write01">${product.manuDate}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -92,7 +92,7 @@ Product vo = (Product)request.getAttribute("upcom");
 	<tr>
 		<td width="104" class="ct_write">가격</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.price}</td>
+		<td class="ct_write01">${product.price}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -100,7 +100,7 @@ Product vo = (Product)request.getAttribute("upcom");
 	<tr>
 		<td width="104" class="ct_write">등록일자</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${upcom.regDate}</td>
+		<td class="ct_write01">${product.regDate}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>

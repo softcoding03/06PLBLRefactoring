@@ -42,7 +42,7 @@
 			상품명 <img src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${getVO.prodName} </td>
+		<td class="ct_write01">${product.prodName} </td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -52,7 +52,7 @@
 			상품이미지 <img 	src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${getVO.fileName}
+		<td class="ct_write01">${product.fileName}
 		</td>
 	</tr>
 	<tr>
@@ -63,7 +63,7 @@
 			상품상세정보 <img src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${getVO.prodDetail}</td>
+		<td class="ct_write01">${product.prodDetail}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -71,7 +71,7 @@
 	<tr>
 		<td width="104" class="ct_write">제조일자</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${getVO.manuDate}</td>
+		<td class="ct_write01">${product.manuDate}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -79,7 +79,7 @@
 	<tr>
 		<td width="104" class="ct_write">가격</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${getVO.price}</td>
+		<td class="ct_write01">${product.price}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -87,7 +87,7 @@
 	<tr>
 		<td width="104" class="ct_write">등록일자</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01">${getVO.regDate}</td>
+		<td class="ct_write01">${product.regDate}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -107,13 +107,13 @@
 				</td>
 				<c:if test="${user.userId != 'admin'}">
 				<td background="/images/ct_btnbg02.gif" class="ct_btn01" style="padding-top: 3px;">
-					<a href="/addPurchaseView.do?prod_no=${getVO.prodNo}">구매</a>
+					<a href="/addPurchaseView.do?prodNo=${product.prodNo}">구매</a>
 				</td>
 				</c:if>
 				
 				<c:if test="${user.userId == 'admin'}">
 					<td background="/images/ct_btnbg02.gif" class="ct_btn01" style="padding-top: 3px;">
-						<a href="/updateProductView.do?prod_no=${getVO.prodNo}">수정</a>
+						<a href="/updateProductView.do?prodNo=${product.prodNo}">수정</a>
 					</td>
 				</c:if>
 				

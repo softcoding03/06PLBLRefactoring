@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%-- 
-<%
-Product vo = (Product)request.getAttribute("select");
-%>
---%>
+
 
 <html>
 <head>
@@ -41,7 +37,7 @@ function fncUpdateProduct(){
 		return;
 	}
 
-	document.detailForm.action='/updateProduct.do?prodNo=${select.prodNo}&regdate=${select.regDate}';
+	document.detailForm.action='/updateProduct.do?prodNo=${product.prodNo}';
 	document.detailForm.submit(); 
 }
 
@@ -88,7 +84,7 @@ function resetData(){
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="105">
-						<input type="text" name="prodName" value="${select.prodName}" class="ct_input_g" 
+						<input type="text" name="prodName" value="${product.prodName}" class="ct_input_g" 
 									style="width: 100px; height: 19px" maxLength="20">
 					</td>
 				</tr>
@@ -104,7 +100,7 @@ function resetData(){
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
 		<td class="ct_write01">
-			<input type="text" name="prodDetail" value="${select.prodDetail}" class="ct_input_g" 
+			<input type="text" name="prodDetail" value="${product.prodDetail}" class="ct_input_g" 
 						style="width: 100px; height: 19px" maxLength="10" minLength="6"/>
 		</td>
 	</tr>
@@ -117,7 +113,7 @@ function resetData(){
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
 		<td class="ct_write01">
-			<input type="text" name="manuDate" value="${select.manuDate}" class="ct_input_g"  
+			<input type="text" name="manuDate" value="${product.manuDate}" class="ct_input_g"  
 						style="width: 100px; height: 19px"	maxLength="10" minLength="6"/>
 				&nbsp;<img src="../images/ct_icon_date.gif" width="15" height="15" 
 										onclick="show_calendar('document.detailForm.manuDate', document.detailForm.manuDate.value)"/>
@@ -132,7 +128,7 @@ function resetData(){
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
 		<td class="ct_write01">
-			<input type="text" name="price" value="${select.price}" 	class="ct_input_g" 
+			<input type="text" name="price" value="${product.price}" 	class="ct_input_g" 
 						style="width: 100px; height: 19px" maxLength="10">&nbsp;¿ø
 		</td>
 	</tr>
